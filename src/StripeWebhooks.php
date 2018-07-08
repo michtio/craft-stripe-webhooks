@@ -1,33 +1,29 @@
 <?php
 /**
- * Stripe Webhooks plugin for Craft CMS 3.x
+ * Stripe Webhooks plugin for Craft CMS 3.x.
  *
  * Handle Stripe webhooks in a CraftCMS application
  *
  * @link      https://rias.be
+ *
  * @copyright Copyright (c) 2018 Rias
  */
 
 namespace rias\stripewebhooks;
 
-use rias\stripewebhooks\models\Settings;
-
 use Craft;
 use craft\base\Plugin;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
-use craft\web\UrlManager;
 use craft\events\RegisterUrlRulesEvent;
-
+use craft\web\UrlManager;
+use rias\stripewebhooks\models\Settings;
 use yii\base\Event;
 
 /**
- * Class StripeWebhooks
+ * Class StripeWebhooks.
  *
  * @author    Rias
- * @package   StripeWebhooks
- * @since     1.0.0
  *
+ * @since     1.0.0
  */
 class StripeWebhooks extends Plugin
 {
@@ -51,7 +47,7 @@ class StripeWebhooks extends Plugin
     // =========================================================================
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function init()
     {
@@ -71,7 +67,7 @@ class StripeWebhooks extends Plugin
     // =========================================================================
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function createSettingsModel()
     {

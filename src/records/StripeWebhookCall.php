@@ -1,10 +1,11 @@
 <?php
 /**
- * Stripe Webhooks plugin for Craft CMS 3.x
+ * Stripe Webhooks plugin for Craft CMS 3.x.
  *
  * Handle Stripe webhooks in a CraftCMS application
  *
  * @link      https://rias.be
+ *
  * @copyright Copyright (c) 2018 Rias
  */
 
@@ -13,12 +14,12 @@ namespace rias\stripewebhooks\records;
 use Craft;
 use craft\db\ActiveRecord;
 use rias\stripewebhooks\events\WebhookEvent;
-use rias\stripewebhooks\StripeWebhooks;
 use rias\stripewebhooks\exceptions\WebhookFailed;
+use rias\stripewebhooks\StripeWebhooks;
 
 /**
  * @author    Rias
- * @package   StripeWebhooks
+ *
  * @since     1.0.0
  */
 class StripeWebhookCall extends ActiveRecord
@@ -27,7 +28,7 @@ class StripeWebhookCall extends ActiveRecord
     // =========================================================================
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName()
     {
@@ -59,7 +60,7 @@ class StripeWebhookCall extends ActiveRecord
             return;
         }
 
-        if (! class_exists($jobClass)) {
+        if (!class_exists($jobClass)) {
             throw WebhookFailed::jobClassDoesNotExist($jobClass, $this);
         }
 
@@ -69,9 +70,9 @@ class StripeWebhookCall extends ActiveRecord
     public function saveException(Exception $exception)
     {
         $this->exception = json_encode([
-            'code' => $exception->getCode(),
+            'code'    => $exception->getCode(),
             'message' => $exception->getMessage(),
-            'trace' => $exception->getTraceAsString(),
+            'trace'   => $exception->getTraceAsString(),
         ]);
 
         $this->save();

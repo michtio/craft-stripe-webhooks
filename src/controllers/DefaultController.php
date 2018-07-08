@@ -1,38 +1,36 @@
 <?php
 /**
- * Stripe Webhooks plugin for Craft CMS 3.x
+ * Stripe Webhooks plugin for Craft CMS 3.x.
  *
  * Handle Stripe webhooks in a CraftCMS application
  *
  * @link      https://rias.be
+ *
  * @copyright Copyright (c) 2018 Rias
  */
 
 namespace rias\stripewebhooks\controllers;
 
-use rias\stripewebhooks\records\StripeWebhookCall;
-use rias\stripewebhooks\StripeWebhooks;
-use rias\stripewebhooks\exceptions\WebhookFailed;
-use Stripe\Webhook;
-
 use Craft;
 use craft\web\Controller;
+use rias\stripewebhooks\exceptions\WebhookFailed;
+use rias\stripewebhooks\records\StripeWebhookCall;
+use rias\stripewebhooks\StripeWebhooks;
+use Stripe\Webhook;
 
 /**
  * @author    Rias
- * @package   StripeWebhooks
+ *
  * @since     1.0.0
  */
 class DefaultController extends Controller
 {
-
     // Protected Properties
     // =========================================================================
 
     /**
-     * @var    bool|array Allows anonymous access to this controller's actions.
-     *         The actions must be in 'kebab-case'
-     * @access protected
+     * @var bool|array Allows anonymous access to this controller's actions.
+     *                 The actions must be in 'kebab-case'
      */
     protected $allowAnonymous = ['index'];
 
@@ -43,7 +41,6 @@ class DefaultController extends Controller
         parent::__construct($id, $module, $config = []);
         $this->enableCsrfValidation = false;
     }
-
 
     /**
      * @return mixed
@@ -57,8 +54,8 @@ class DefaultController extends Controller
         $modelClass = StripeWebhooks::$plugin->settings->model;
 
         $stripeWebhookCall = new StripeWebhookCall([
-            'siteId' => Craft::$app->getSites()->getCurrentSite()->id,
-            'type' =>  $eventPayload->type ?? '',
+            'siteId'  => Craft::$app->getSites()->getCurrentSite()->id,
+            'type'    => $eventPayload->type ?? '',
             'payload' => json_encode($eventPayload),
         ]);
         $stripeWebhookCall->save(false);
@@ -67,6 +64,7 @@ class DefaultController extends Controller
             $stripeWebhookCall->process();
         } catch (Exception $exception) {
             $stripeWebhookCall->saveException($exception);
+
             throw $exception;
         }
     }
@@ -77,7 +75,7 @@ class DefaultController extends Controller
         $secret = StripeWebhooks::$plugin->getSettings()->signingSecret;
         $payload = Craft::$app->getRequest()->getRawBody();
 
-        if (! $signature) {
+        if (!$signature) {
             throw WebhookFailed::missingSignature();
         }
 
@@ -93,5 +91,4 @@ class DefaultController extends Controller
 
         return true;
     }
-
 }

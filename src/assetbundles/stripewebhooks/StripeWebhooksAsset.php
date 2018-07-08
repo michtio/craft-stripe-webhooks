@@ -1,10 +1,11 @@
 <?php
 /**
- * Stripe Webhooks plugin for Craft CMS 3.x
+ * Stripe Webhooks plugin for Craft CMS 3.x.
  *
  * Handle Stripe webhooks in a CraftCMS application
  *
  * @link      https://rias.be
+ *
  * @copyright Copyright (c) 2018 Rias
  */
 
@@ -16,7 +17,7 @@ use craft\web\assets\cp\CpAsset;
 
 /**
  * @author    Rias
- * @package   StripeWebhooks
+ *
  * @since     1.0.0
  */
 class StripeWebhooksAsset extends AssetBundle
@@ -25,11 +26,11 @@ class StripeWebhooksAsset extends AssetBundle
     // =========================================================================
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function init()
     {
-        $this->sourcePath = "@rias/stripewebhooks/assetbundles/stripewebhooks/dist";
+        $this->sourcePath = '@rias/stripewebhooks/assetbundles/stripewebhooks/dist';
 
         $this->depends = [
             CpAsset::class,

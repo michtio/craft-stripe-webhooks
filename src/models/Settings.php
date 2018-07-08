@@ -1,24 +1,23 @@
 <?php
 /**
- * Stripe Webhooks plugin for Craft CMS 3.x
+ * Stripe Webhooks plugin for Craft CMS 3.x.
  *
  * Handle Stripe webhooks in a CraftCMS application
  *
  * @link      https://rias.be
+ *
  * @copyright Copyright (c) 2018 Rias
  */
 
 namespace rias\stripewebhooks\models;
 
-use rias\stripewebhooks\records\StripeWebhookCall;
-use rias\stripewebhooks\StripeWebhooks;
-
 use Craft;
 use craft\base\Model;
+use rias\stripewebhooks\records\StripeWebhookCall;
 
 /**
  * @author    Rias
- * @package   StripeWebhooks
+ *
  * @since     1.0.0
  */
 class Settings extends Model
@@ -42,7 +41,7 @@ class Settings extends Model
     // =========================================================================
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules()
     {

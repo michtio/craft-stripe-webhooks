@@ -1,16 +1,17 @@
 <?php
 /**
- * Stripe Webhooks plugin for Craft CMS 3.x
+ * Stripe Webhooks plugin for Craft CMS 3.x.
  *
  * Handle Stripe webhooks in a CraftCMS application
  *
  * @link      https://rias.be
+ *
  * @copyright Copyright (c) 2018 Rias
  */
 
 /**
  * @author    Rias
- * @package   StripeWebhooks
+ *
  * @since     1.0.0
  */
 return [

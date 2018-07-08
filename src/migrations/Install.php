@@ -1,16 +1,15 @@
 <?php
 /**
- * Stripe Webhooks plugin for Craft CMS 3.x
+ * Stripe Webhooks plugin for Craft CMS 3.x.
  *
  * Handle Stripe webhooks in a CraftCMS application
  *
  * @link      https://rias.be
+ *
  * @copyright Copyright (c) 2018 Rias
  */
 
 namespace rias\stripewebhooks\migrations;
-
-use rias\stripewebhooks\StripeWebhooks;
 
 use Craft;
 use craft\config\DbConfig;
@@ -18,7 +17,7 @@ use craft\db\Migration;
 
 /**
  * @author    Rias
- * @package   StripeWebhooks
+ *
  * @since     1.0.0
  */
 class Install extends Migration
@@ -35,7 +34,7 @@ class Install extends Migration
     // =========================================================================
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function safeUp()
     {
@@ -51,8 +50,8 @@ class Install extends Migration
         return true;
     }
 
-   /**
-     * @inheritdoc
+    /**
+     * {@inheritdoc}
      */
     public function safeDown()
     {
@@ -78,14 +77,14 @@ class Install extends Migration
             $this->createTable(
                 '{{%stripewebhooks_stripewebhookcall}}',
                 [
-                    'id' => $this->primaryKey(),
+                    'id'          => $this->primaryKey(),
                     'dateCreated' => $this->dateTime()->notNull(),
                     'dateUpdated' => $this->dateTime()->notNull(),
-                    'uid' => $this->uid(),
-                    'siteId' => $this->integer()->notNull(),
-                    'type' => $this->string(255),
-                    'payload' => $this->text(),
-                    'exception' => $this->text(),
+                    'uid'         => $this->uid(),
+                    'siteId'      => $this->integer()->notNull(),
+                    'type'        => $this->string(255),
+                    'payload'     => $this->text(),
+                    'exception'   => $this->text(),
                 ]
             );
         }
