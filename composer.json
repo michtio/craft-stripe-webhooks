@@ -1,0 +1,41 @@
+{
+    "name": "rias/craft-stripe-webhooks",
+    "description": "Handle Stripe webhooks in a CraftCMS application",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "stripe webhooks"
+    ],
+    "support": {
+        "docs": "https://github.com/Rias500/craft-stripe-webhooks/blob/master/README.md",
+        "issues": "https://github.com/Rias500/craft-stripe-webhooks/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rias",
+            "homepage": "https://rias.be"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "stripe/stripe-php": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+          "rias\\stripewebhooks\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Stripe Webhooks",
+        "handle": "stripe-webhooks",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-stripe-webhooks/master/CHANGELOG.md",
+        "class": "rias\\stripewebhooks\\StripeWebhooks"
+    }
+}
