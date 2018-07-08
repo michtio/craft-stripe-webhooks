@@ -13,6 +13,12 @@ This plugin will not handle what should be done after the webhook request has be
 
 Before using this plugin we highly recommend reading [the entire documentation on webhooks over at Stripe](https://stripe.com/docs/webhooks).
 
+## Support Open Source. Buy beer.
+
+This plugin is licensed under a MIT license, which means that it's completely free open source software, and you can use it for whatever and however you wish. If you're using it and want to support the development, buy me a beer over at Beerpay!
+
+[![Beerpay](https://beerpay.io/Rias500/craft-stripe-webhooks/badge.svg?style=beer-square)](https://beerpay.io/Rias500/craft-stripe-webhooks)
+
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0.
