@@ -53,7 +53,7 @@ return [
      */
     'endpoint' => 'stripe-webhooks',
 ];
-
+```
 
 In the `signingSecret` key of the config file you should add a valid webhook secret. You can find the secret used at [the webhook configuration settings on the Stripe dashboard](https://dashboard.stripe.com/account/webhooks).
 
