@@ -97,16 +97,6 @@ class Install extends Migration
      */
     protected function createIndexes()
     {
-        $this->createIndex(
-            $this->db->getIndexName(
-                '{{%stripewebhooks_stripewebhookcall}}',
-                'some_field',
-                true
-            ),
-            '{{%stripewebhooks_stripewebhookcall}}',
-            'some_field',
-            true
-        );
         // Additional commands depending on the db driver
         switch ($this->driver) {
             case DbConfig::DRIVER_MYSQL:
