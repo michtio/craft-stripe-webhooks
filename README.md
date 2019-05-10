@@ -1,7 +1,7 @@
 ![icon](./src/icon.svg)
 
-[![Latest Version](https://img.shields.io/github/release/rias500/craft-stripe-webhooks.svg?style=flat-square)](https://github.com/rias500/craft-stripe-webhooks/releases)
-[![Quality Score](https://img.shields.io/scrutinizer/g/rias500/craft-stripe-webhooks.svg?style=flat-square)](https://scrutinizer-ci.com/g/rias500/craft-stripe-webhooks)
+[![Latest Version](https://img.shields.io/github/release/riasvdv/craft-stripe-webhooks.svg?style=flat-square)](https://github.com/riasvdv/craft-stripe-webhooks/releases)
+[![Quality Score](https://img.shields.io/scrutinizer/g/riasvdv/craft-stripe-webhooks.svg?style=flat-square)](https://scrutinizer-ci.com/g/riasvdv/craft-stripe-webhooks)
 [![StyleCI](https://styleci.io/repos/140159579/shield)](https://styleci.io/repos/140159579)
 [![Total Downloads](https://img.shields.io/packagist/dt/rias/craft-stripe-webhooks.svg?style=flat-square)](https://packagist.org/packages/rias/craft-stripe-webhooks)
 

@@ -11,8 +11,8 @@
         "stripe webhooks"
     ],
     "support": {
-        "docs": "https://github.com/Rias500/craft-stripe-webhooks/blob/master/README.md",
-        "issues": "https://github.com/Rias500/craft-stripe-webhooks/issues"
+        "docs": "https://github.com/riasvdv/craft-stripe-webhooks/blob/master/README.md",
+        "issues": "https://github.com/riasvdv/craft-stripe-webhooks/issues"
     },
     "license": "MIT",
     "authors": [
@@ -35,7 +35,7 @@
         "handle": "stripe-webhooks",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-stripe-webhooks/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/riasvdv/craft-stripe-webhooks/master/CHANGELOG.md",
         "class": "rias\\stripewebhooks\\StripeWebhooks"
     }
 }
