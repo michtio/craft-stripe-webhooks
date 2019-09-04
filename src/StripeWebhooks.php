@@ -11,7 +11,6 @@
 
 namespace rias\stripewebhooks;
 
-use Craft;
 use craft\base\Plugin;
 use craft\events\RegisterUrlRulesEvent;
 use craft\web\UrlManager;
