@@ -23,7 +23,7 @@
     ],
     "require": {
         "craftcms/cms": "^3.0.0",
-        "stripe/stripe-php": "^6.10"
+        "stripe/stripe-php": "^7.0"
     },
     "autoload": {
         "psr-4": {
