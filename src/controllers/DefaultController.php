@@ -53,7 +53,7 @@ class DefaultController extends Controller
         $eventPayload = json_decode(Craft::$app->getRequest()->getRawBody());
         $modelClass = StripeWebhooks::$plugin->settings->model;
 
-        $stripeWebhookCall = new StripeWebhookCall([
+        $stripeWebhookCall = new $modelClass([
             'siteId'  => Craft::$app->getSites()->getCurrentSite()->id,
             'type'    => $eventPayload->type ?? '',
             'payload' => json_encode($eventPayload),
