@@ -14,7 +14,6 @@ namespace rias\stripewebhooks\controllers;
 use Craft;
 use craft\web\Controller;
 use rias\stripewebhooks\exceptions\WebhookFailed;
-use rias\stripewebhooks\records\StripeWebhookCall;
 use rias\stripewebhooks\StripeWebhooks;
 use Stripe\Webhook;
 

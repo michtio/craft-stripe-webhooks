@@ -11,7 +11,6 @@
 
 namespace rias\stripewebhooks\models;
 
-use Craft;
 use craft\base\Model;
 use rias\stripewebhooks\records\StripeWebhookCall;
 
